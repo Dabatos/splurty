@@ -7,25 +7,37 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <style>
+    .clear { clear: both; }
+    body { font-family: 'Lato', sans-serif; }
 
+    .logo img { border-top: 9px solid #222; }
+    .logo img p { text-align: center; } /* Centers IMG */
+
+    /* Links */
+    .links {  text-align: center;}
+    .links a { color: black; font-size: 25px; padding-top: 26px; border-bottom: 1px solid #dfdfdf;}
+
+
+    .quotes { border: 2px solid #000; padding: 15px; max-width: 704px; text-align: center; margin: 0 auto; }
+  </style>
   <body>
+
     <header class="row">
-      <div>
-        LOGO
+      <div class=logo>
+        <p style="text-align: center;"><img src="https://direct.cornerstone.cc/assets/merchant/devslife_paypage/images/devslife-transp.png"></p>
       </div>
 
-      <div>
-        Code. Create. Live
-      </div>
-      <div>
+      <div class=links>
        <%= link_to 'Contribute', '#' %>
        <%= link_to 'About', '#' %>
       </div>
 
     </header>
+    
   <br>
-
-   <%= yield %>
-
+    <div class=quotes>
+     <%= yield %>
+   </div>
   </body>
 </html>
